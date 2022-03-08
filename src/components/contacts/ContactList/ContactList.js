@@ -8,7 +8,7 @@ const ContactList = () => {
         <div className="grid">
           <div className="row">
             <div className="col">
-              <p className="h3">Contact Manager
+              <p className="h3 fw-bold">Contact Manager
                 <NavLink to = {'/contacts/add'} className = 'btn btn-primary ms-2' > <i className="fa fa-plus-circle me-2"></i> New </NavLink>
               </p>
               <p className="fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, doloribus tempore? Dignissimos sapiente voluptate aspernatur, doloremque numquam sint totam saepe adipisci dolor assumenda, maiores deleniti tempore dolore itaque distinctio harum.</p>
@@ -40,14 +40,29 @@ const ContactList = () => {
           <div className="col-md-6">
             <div className="card">
               <div className="card-body">
-                <div className="col-md-4">
-                  
+                <div className="row align-items-center dflex justify-content-around">
+                  <div className="col-md-4">
+                  <img src="https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png" alt="user_icon" className="img-fluid" />
                 </div>
                 <div className="col-md-7">
-                  
+                  <ul className="list-group">
+                    <li className="list-group-item list-group-item-action">
+                      Name : <span className="fw-bold">Rajan</span>  
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                      Mobile : <span className="fw-bold">9847612744</span>  
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                      E-mail : <span className="fw-bold">admin@gmail.com</span>  
+                    </li>
+                  </ul>
                 </div>
-                <div className="col-md-1">
-                  
+                <div className="col-md-1 d-flex flex-column align-items-center">
+                    <NavLink to = '/contacts/view/:contactId' className= 'btn btn-warning my-1' > <i className="fa fa-eye"></i></NavLink>
+                    <NavLink to = '/contacts/edit/:contactId' className= 'btn btn-primary my-1' > <i className="fa fa-pen"></i></NavLink>
+                    <button className= 'btn btn-danger my-1' > <i className="fa fa-trash"></i></button>
+                </div>
+
                 </div>
               </div>  
             </div>  
